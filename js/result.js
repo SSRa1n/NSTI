@@ -1,11 +1,72 @@
 const api = "http://127.0.0.1:8000";
 
 const urlParams = new URLSearchParams(window.location.search);
-const key = urlParams.get('key');
+const key = urlParams.get('q');
 console.log(key);
 
 function arrow_scroll(){
     document.getElementById(`description-title`).scrollIntoView();
+}
+
+function get_quiz_score(quiz, answer) {
+    return answer * quiz['multiplier'] * quiz['weight']
+}
+
+async function get_percentage(key){
+    key = atob(key)
+    key = key.split(",");
+    key = key.map(Number);
+
+    let trait_response = await fetch("./json/trait.json");
+    let trait_count = await trait_response.json();
+
+    let quiz_response = await fetch("./json/quiz_list.json");
+    let quizdata = await quiz_response.json();
+
+    for (let i = 0; i < key.length; i++){
+        const answer = key[i];
+        const quiz = quizdata[i];
+
+        trait_count[quiz['type']] += get_quiz_score(quiz, answer);
+    }
+
+    // Calculate percentages
+    let full_trait_response = await fetch("./json/full_trait.json");
+    let full_trait_count = await full_trait_response.json();
+
+    let percentage_dict = {}
+    let result_dict = {}
+    // SM is a special case where there's "bad" and "worse" instead of positive and negative
+    // so if the total score is less than the threshold, the answer is both "bad" and "worse"
+    // hence multiplying the score by 2 and flipping the sign
+    const SM_threshold = 0.5
+    const SM_multiplier = 1 / SM_threshold
+
+    for (let [key, value] of Object.entries(trait_count)) {
+        percentage_dict[key] = trait_count[key] / full_trait_count[key]
+    }
+
+    for (let [key, value] of Object.entries(percentage_dict)) {
+        if (key === 'SM') {
+            if (value > -1 && value < -SM_threshold) {
+                result_dict[key] = percentage_dict[key]
+            }   
+            else if (value >= -SM_threshold && value < 0) {
+                result_dict[key] = -SM_multiplier * percentage_dict[key]
+            }
+            else if (value >= 0 && value < SM_threshold) {
+                result_dict[key] = -SM_multiplier * percentage_dict[key]
+            }
+            else {
+                result_dict[key] = percentage_dict[key]
+            }
+        }
+        else {
+            result_dict[key] = percentage_dict[key]
+        }
+    }
+
+    return result_dict
 }
 
 async function show_detail(){
@@ -13,8 +74,7 @@ async function show_detail(){
     const header_type = document.getElementById('header-type');
     const paragraph_text = document.getElementById('paragraph-text')
 
-    let response = await fetch(`${api}/getpercentage?answer_key=${key}`); // Fetch data from '/hotel' endpoint
-    let data = await response.json(); // Parse the JSON response
+    let data = await get_percentage(key); // Parse the JSON response
     console.log(data);
     let personality_text = "";
     let percentage_array = []
@@ -27,8 +87,15 @@ async function show_detail(){
         }
         percentage_array.push(value)
     }   
-    let detail_response = await fetch(`${api}/getdetails?personality=${personality_text}`); // Fetch data from '/hotel' endpoint
-    let detail_data = await detail_response.json(); // Parse the JSON response
+
+    let detail_response = await fetch("./json/personality_details.json");
+    let detail_data = await detail_response.json();
+    for( let i = 0; i < detail_data.length; i++){
+        if (detail_data[i]['personality_type'] === personality_text){
+            detail_data = detail_data[i];
+            break;
+        }
+    }
     console.log(detail_data)
 
     header_name.innerHTML = detail_data['name'];
@@ -66,4 +133,31 @@ async function show_detail(){
     };
 }
 
+async function load_potential() {
+    history.pushState({ page: "potential" }, "", "?potential");
+
+    const iframe = document.createElement('iframe');
+    iframe.src = `potential.html`;
+    iframe.style.width = '100%';
+    iframe.style.height = '100vh';
+    iframe.style.border = 'none';
+
+    container.innerHTML = '';
+    container.appendChild(iframe);
+    container.style.display = 'block';
+
+    document.getElementById('body').style.display = 'none';
+}
+
+const container = document.getElementById('potentialContainer');
+
+window.onpopstate = function(event) {
+    if (!event.state || event.state.page !== 'potential') {
+    container.style.display = 'none';
+    document.getElementById('body').style.display = 'block';
+    }
+}
+
 show_detail();
+
+document.getElementById('quiz-submit').addEventListener('click', load_potential);

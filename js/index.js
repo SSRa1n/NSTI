@@ -5,8 +5,8 @@ function arrow_scroll(){
 }
 
 async function show_quiz() {
-    let response = await fetch(`${api}/getquiz`); // Fetch data from '/hotel' endpoint
-    let quizdata = await response.json(); // Parse the JSON response
+    let response = await fetch("./json/quiz_list.json");
+    let quizdata = await response.json();
     const quiz_list = document.getElementById('quiz-list');
     let content = ""
     for (let i = 0; i < quizdata.length; i++){
@@ -58,7 +58,25 @@ async function show_quiz() {
     quiz_list.innerHTML = content;
 }
 
-async function quiz_submit() {
+async function load_result_page(data){
+    data = btoa(data)
+
+    history.pushState({page: 'result', data}, '', `?q=${data}`);
+
+    const iframe = document.createElement('iframe');
+    iframe.src = `result.html?q=${data}`;
+    iframe.style.width = '100%';
+    iframe.style.height = '100vh';
+    iframe.style.border = 'none';
+
+    container.innerHTML = '';
+    container.appendChild(iframe);
+    container.style.display = 'block';
+
+    document.getElementById('body').style.display = 'none';
+}
+
+async function show_result(){
     let data = [];
     const questions = document.querySelectorAll('.question'); // Select all question elements
     console.log(questions)
@@ -74,10 +92,20 @@ async function quiz_submit() {
         }
     };
     data = data.join();
-    window.location.href = `result.html?key=${data}`;
+    load_result_page(data);
 }
 
 submit_button = document.getElementById('quiz-submit');
 
+submit_button.addEventListener("click", show_result);
+
+const container = document.getElementById('resultContainer');
+
+window.onpopstate = function(event) {
+    if (!event.state || event.state.page !== 'result') {
+    container.style.display = 'none';
+    document.getElementById('body').style.display = 'block';
+    }
+}
+
 show_quiz();
-submit_button.addEventListener("click", quiz_submit);
