@@ -1,5 +1,3 @@
-const api = "http://127.0.0.1:8000";
-
 function arrow_scroll(){
     document.getElementById(`description-title`).scrollIntoView()
 }
@@ -106,6 +104,52 @@ window.onpopstate = function(event) {
     container.style.display = 'none';
     document.getElementById('body').style.display = 'block';
     }
+}
+
+// --- Testing helpers -------------------------------------------------
+// Auto-select the same answer for every question (default: 2)
+function autoFillAnswers(value = 2) {
+    const questions = document.querySelectorAll('.question');
+    questions.forEach((q, idx) => {
+        const selector = `input[name="choice-${idx}"][value="${value}"]`;
+        const input = q.querySelector(selector);
+        if (input) {
+            input.checked = true;
+        } else {
+            // fallback: check first available option
+            const any = q.querySelector('input[type="radio"]');
+            if (any) any.checked = true;
+        }
+    });
+}
+
+// Fill with random answers (useful for quick variability)
+function autoFillRandom() {
+    const values = ['-2', '-1', '0', '1', '2'];
+    const questions = document.querySelectorAll('.question');
+    questions.forEach((q, idx) => {
+        const val = values[Math.floor(Math.random() * values.length)];
+        const input = q.querySelector(`input[name="choice-${idx}"][value="${val}"]`);
+        if (input) input.checked = true;
+    });
+}
+
+// Add a small debug button next to the submit button to trigger autofill
+function enable_autofill() {
+    const submit = document.getElementById('quiz-submit');
+    if (submit && !document.getElementById('auto-fill-btn')) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.id = 'auto-fill-btn';
+        btn.className = 'btn btn-secondary ms-2';
+        btn.textContent = 'Auto-fill answers';
+        btn.title = 'Auto-fill all questions with the strongest positive answer (for testing)';
+        btn.addEventListener('click', () => autoFillAnswers(2));
+        submit.parentNode.appendChild(btn);
+
+        // optional quick random-fill via right-click (for testing)
+        btn.addEventListener('contextmenu', (e) => { e.preventDefault(); autoFillRandom(); });
+    };
 }
 
 show_quiz();

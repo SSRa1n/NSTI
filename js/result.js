@@ -1,5 +1,3 @@
-const api = "http://127.0.0.1:8000";
-
 const urlParams = new URLSearchParams(window.location.search);
 const key = urlParams.get('q');
 console.log(key);
