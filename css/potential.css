@@ -1,6 +1,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    height: 100%;
 }
 
 .navbar
@@ -14,10 +15,22 @@ html, body {
 {
     font-family: 'Din', sans-serif; 
     font-size: 20px; 
+    min-height: 100vh;                /* use min-height so content can flow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .loading-text
 {
     max-width: 80vw;
     font-size: 200px;
+    font-size: clamp(2rem, 8vw, 12rem); /* responsive between small and large screens */
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
