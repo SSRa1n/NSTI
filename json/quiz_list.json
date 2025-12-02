@@ -3,14 +3,14 @@
         "type": "YR",
         "indicator": "Y",
         "weight": 1,
-        "question": "Do you often involved in group shenanigans?",
+        "question": "Are you often involved in group shenanigans?",
         "multiplier": 1
     },
     {
         "type": "SM",
         "indicator": "S",
         "weight": 2,
-        "question": "Do you feel unsafe when a muslim carries the oddly large and suspiciously shape backpack in the public near you?",
+        "question": "Do you feel unsafe when a muslim carries the oddly large and suspiciously shaped backpack in the public near you?",
         "multiplier": 1
     },
     {
@@ -24,14 +24,14 @@
         "type": "SM",
         "indicator": "S",
         "weight": 2,
-        "question": "Do you think there are certain group of race that could allow you to not lock the door if they are not exist on the world?",
+        "question": "Do you think there are certain group of race that could allow you to not lock the door if they don't exist?",
         "multiplier": 1
     },
     {
         "type": "SM",
         "indicator": "S",
         "weight": 2,
-        "question": "How hard your colonizer accent goes when you say racial slur to your boys?",
+        "question": "How hard does your colonizer accent goes when you say racial slur to your boys?",
         "multiplier": 1
     },
     {
@@ -45,7 +45,7 @@
         "type": "SM",
         "indicator": "M",
         "weight": 1,
-        "question": "Have you ever been rejected from an art related school",
+        "question": "Have you ever been rejected from an art related school?",
         "multiplier": -1
     },
     {
@@ -59,7 +59,7 @@
         "type": "SM",
         "indicator": "M",
         "weight": 3,
-        "question": "Do you think your race is superior than other races and there should only be your race in god image creation?",
+        "question": "Do you think your race is superior than other races and there should only be your race in god's image creation?",
         "multiplier": -1
     },
     {
@@ -80,14 +80,14 @@
         "type": "PC",
         "indicator": "C",
         "weight": 1,
-        "question": "Do you often commented on an instagram reels",
+        "question": "Do you often comment on an Instagram Reels?",
         "multiplier": -1
     },
     {
         "type": "PC",
         "indicator": "P",
         "weight": 1,
-        "question": "Does your homies target you for no reason? Everything is your fault, even though you ain't even involved",
+        "question": "Do your homies target you for no reason? Everything is your fault, even though you ain't even involved.",
         "multiplier": 1
     },
     {
@@ -100,15 +100,15 @@
     {
         "type": "GK",
         "indicator": "G",
-        "weight": 1,
-        "question": "Fellas, is it gay to like women? I mean you literally like somebody who likes Dicks.",
+        "weight": 2,
+        "question": "Do you often fantasize about how loud, bouncy and juicy your homies' ass would sound if you slap it?",
         "multiplier": 1
     },
     {
         "type": "GK",
         "indicator": "G",
-        "weight": 2,
-        "question": "Do you often fantasize about how loud, bouncy and juicy your homies' ass would sound if you slap it?",
+        "weight": 1,
+        "question": "Fellas, is it gay to like women? I mean you literally like somebody who likes Dicks.",
         "multiplier": 1
     },
     {
@@ -129,7 +129,7 @@
         "type": "GK",
         "indicator": "K",
         "weight": 3,
-        "question": "Could you imagine yourself pay a fortune to an artist to animate your favorite character from the show molesting you?",
+        "question": "Could you imagine yourself paying a fortune to an artist to animate your favorite character from the show molesting you?",
         "multiplier": -1
     },
     {
@@ -150,14 +150,14 @@
         "type": "GK",
         "indicator": "K",
         "weight": 4,
-        "question": "Do you think your sexual fantasy are much worse than a League of Legends balancing team who jerked off to the spreadsheet of Champions' winrate duct taped to their walls",
+        "question": "Do you think your sexual fantasy are much worse than a League of Legends balancing team who jerked off to the spreadsheet of Champions' winrate duct taped to their walls?",
         "multiplier": -1
     },
     {
         "type": "ZV",
         "indicator": "Z",
         "weight": 3,
-        "question": "Have you ever railed a person in cardio activity related so hard that it feel like they would tweet about how amazing it was?",
+        "question": "Have you ever railed a person in cardio-related activity so hard that it feel like they would tweet about how amazing it was?",
         "multiplier": 1
     },
     {
