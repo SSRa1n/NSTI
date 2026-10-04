@@ -1,0 +1,152 @@
+[
+    {
+        "index": 0,
+        "indicator": "YR",
+        "weight": 1,
+        "question": "Do you often involve yourself in group shenanigans?"
+    },
+    {
+        "index": 1,
+        "indicator": "SM",
+        "weight": 2,
+        "question": "Do you feel unsafe when a muslim carries the oddly large and suspiciously shaped backpack in the public near you?"
+    },
+    {
+        "index": 2,
+        "indicator": "SM",
+        "weight": 2,
+        "question": "Do you agree on the conspiracy theory of the Jews owning all of the world system?"
+    },
+    {
+        "index": 3,
+        "indicator": "SM",
+        "weight": -2,
+        "question": "Do you think there are certain group of race that could allow you to not lock the door if they don't exist?"
+    },
+    {
+        "index": 4,
+        "indicator": "SM",
+        "weight": 2,
+        "question": "How hard does your colonizer accent goes when you say racial slur to your boys?"
+    },
+    {
+        "index": 5,
+        "indicator": "SM",
+        "weight": 2,
+        "question": "Do you have an uncontrollable urge to recite John Cena's bing chillin' speech when a Chinese walks by in a really communist manner?"
+    },
+    {
+        "index": 6,
+        "indicator": "SM",
+        "weight": -1,
+        "question": "Have you ever been rejected from an art-related school?"
+    },
+    {
+        "index": 7,
+        "indicator": "SM",
+        "weight": -1,
+        "question": "Do you think there are inferior race in our society that you want to take an advantage of them if given an opportunity?"
+    },
+    {
+        "index": 8,
+        "indicator": "SM",
+        "weight": -3,
+        "question": "Do you think your race is superior than other races and there should only be your race in god's image creation?"
+    },
+    {
+        "index": 9,
+        "indicator": "SM",
+        "weight": -4,
+        "question": "How likely are you to wipe out a specific race if given an opportunity?"
+    },
+    {
+        "index": 10,
+        "indicator": "PC",
+        "weight": -1,
+        "question": "Do you beat up your homies regularly?"
+    },
+    {
+        "index": 11,
+        "indicator": "PC",
+        "weight": -1,
+        "question": "Do you often partake in a cyberbullying campaign?"
+    },
+    {
+        "index": 12,
+        "indicator": "PC",
+        "weight": 1,
+        "question": "Are you the group's punching bag? Everything is your fault, even though you ain't even involved."
+    },
+    {
+        "index": 13,
+        "indicator": "GK",
+        "weight": 4,
+        "question": "Do you remember when you and your friends had a \"sperm war\" after lunch in middle school and came back to class all creamy?"
+    },
+    {
+        "index": 14,
+        "indicator": "GK",
+        "weight": 2,
+        "question": "Do you often fantasize about how loud, bouncy and juicy your homies' ass would sound if you slap it?"
+    },
+    {
+        "index": 15,
+        "indicator": "GK",
+        "weight": 1,
+        "question": "Fellas, is it gay to like women? I mean you literally like somebody who likes dicks."
+    },
+    {
+        "index": 16,
+        "indicator": "GK",
+        "weight": 1,
+        "question": "FELLAS, IS IT GAY.. TO MASTURBATE!?!? I mean you're literally TOUCHING a DICK."
+    },
+    {
+        "index": 17,
+        "indicator": "GK",
+        "weight": 1,
+        "question": "Do you whack bro's Shaboingus Dingusmagus to transmit signals to aliens to send intergalactic cryptocurrencies to pay the landlord when you're low on rent?"
+    },
+    {
+        "index": 18,
+        "indicator": "GK",
+        "weight": -3,
+        "question": "Could you imagine yourself paying a fortune to an artist to animate your favorite character from the show molesting you?"
+    },
+    {
+        "index": 19,
+        "indicator": "GK",
+        "weight": -2,
+        "question": "Do you scream \"harder daddy\" when getting choked?"
+    },
+    {
+        "index": 20,
+        "indicator": "GK",
+        "weight": -2,
+        "question": "Do you have one of those -philia or -ism fetish?"
+    },
+    {
+        "index": 21,
+        "indicator": "GK",
+        "weight": -4,
+        "question": "Do you think your sexual fantasies are much worse than a League of Legends balancing team who jerked off to the spreadsheet of Champions' winrate duct taped to their walls?"
+    },
+    {
+        "index": 22,
+        "indicator": "ZV",
+        "weight": 3,
+        "question": "Have you ever railed a person in cardio-related activity so hard that it feel like they would tweet about how amazing it was?"
+    },
+    {
+        "index": 23,
+        "indicator": "ZV",
+        "weight": 2,
+        "question": "Have you ever feel like you got a lot of friends or talkers on your sexual preference?"
+    },
+    {
+        "index": 24,
+        "indicator": "ZV",
+        "weight": -4,
+        "question": "Would you tell an ENTIRE WARHAMMER 40K LORE to your date?"
+    }
+]

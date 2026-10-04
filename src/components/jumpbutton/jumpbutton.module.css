@@ -1,0 +1,82 @@
+.jumpButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        rgb(83, 61, 174),
+        rgb(123, 66, 255)
+    );
+
+    border-radius: 50px;
+    border: 2px solid var(--color-gray);
+    padding: 10px 20px;
+
+    box-shadow: 0 8px 24px rgba(83, 61, 174, 0.22);
+
+    transition:
+        box-shadow 0.3s ease,
+        padding 0.3s ease,
+        gap 0.3s ease;
+
+    overflow: hidden;
+}
+
+.jumpButton::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgb(123, 66, 255),
+        rgb(183, 126, 255)
+    );
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    z-index: 0;
+}
+
+.jumpButton > * {
+    position: relative;
+    z-index: 1;
+}
+
+.jumpButton:hover {
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(123, 66, 255, 0.38);
+
+    padding: 10px 24px;
+    gap: 8px;
+}
+
+.jumpButton:hover::before {
+    opacity: 1;
+}
+
+.jumpIcon {
+    font-size: 1.5rem;
+    display: inline-block;
+
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+
+    transform: translateX(-20px);
+
+    transition:
+        opacity 0.3s ease,
+        width 0.3s ease,
+        transform 0.3s ease;
+}
+
+.jumpButton:hover .jumpIcon {
+    opacity: 1;
+    width: auto;
+    transform: translateX(0);
+}

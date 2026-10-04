@@ -1,0 +1,87 @@
+.shape 
+{
+    height: 75px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(50% + 370px) 100%, 47% calc(100% - 27px), calc(50% - 370px) 100%, 0 calc(100% - 30px));
+    background-color: rgba(64, 64, 112, 1);
+    position: relative;
+    width: 100vw;
+    transform: translateY(-1px);
+}
+
+
+i.scroll-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(1rem, 2vw, 2rem);
+    cursor: pointer;
+    animation: bounce 1s infinite; 
+}
+
+.share-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        rgb(83, 61, 174),
+        rgb(123, 66, 255)
+    );
+
+    border-radius: 50%;
+    border: 2px solid var(--color-gray);
+    /* padding: 10px 20px; */
+    height: 50px;
+    width: 50px;
+
+    box-shadow: 0 8px 24px rgba(83, 61, 174, 0.22);
+
+    transition:
+        box-shadow 0.3s ease;
+
+    overflow: hidden;
+}
+
+.share-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgb(123, 66, 255),
+        rgb(183, 126, 255)
+    );
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    z-index: 0;
+}
+
+.share-button > * {
+    position: relative;
+    z-index: 1;
+}
+
+.share-button:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(123, 66, 255, 0.38);
+}
+
+.share-button:hover::before {
+    opacity: 1;
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}

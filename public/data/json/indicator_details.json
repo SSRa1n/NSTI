@@ -1,0 +1,62 @@
+{
+    "Y": {
+        "name": "Yapper",
+        "trait": "Presence",
+        "description": "You don't join the conversation. You are the conversation. Somehow, every topic involves you, and silence is apparently your mortal enemy.",
+        "image": "https://c.tenor.com/K8A8OIcNpQEAAAAd/tenor.gif"
+    },
+    "R": {
+        "name": "Rare Pokemon",
+        "trait": "Presence",
+        "description": "Your appearances in the chat are a documented phenomenon. Nobody knows when you'll show up, but whenever you do, everyone knows it's a special occasion.",
+        "image": "https://c.tenor.com/boGWxbng8IYAAAAd/tenor.gif"
+    },
+    "S": {
+        "name": "Schizo Racist",
+        "trait": "Threat",
+        "description": "Your words contains absolutely no threats, and your intentions are completely unclear. You're probably harmless.. Probably...",
+        "image": "https://c.tenor.com/eQz7y8iDYawAAAAC/tenor.gif"
+    },
+    "M": {
+        "name": "Mein Fuhrer",
+        "trait": "Threat",
+        "description": "There is something deeply ominous about the way you say things. We don't know what you're planning, and frankly, we'd rather not find out.",
+        "image": "https://c.tenor.com/zia0Ni4cIw4AAAAd/tenor.gif"
+    },
+    "P": {
+        "name": "Punching Bag",
+        "trait": "Hierarchy",
+        "description": "Somehow, every problem becomes your fault. You could not even be there and still get blamed. At this point, it's basically a job.",
+        "image": "https://c.tenor.com/lzl1YfgmWK4AAAAd/tenor.gif"
+    },
+    "C": {
+        "name": "Cyberbully",
+        "trait": "Hierarchy",
+        "description": "Somebody is gonna catch some strays, and unfortunately, it's not gonna be you.",
+        "image": "https://c.tenor.com/FSOgE7dR0cQAAAAd/tenor.gif"
+    },
+    "G": {
+        "name": "Gay",
+        "trait": "Diviance",
+        "description": "There's a suspicious amount of evidence suggesting that your mind goes places it probably shouldn't. We know what you're into, but we can't prove it yet.",
+        "image": "https://c.tenor.com/ZuCOwE51ZWAAAAAd/tenor.gif"
+    },
+    "K": {
+        "name": "Kinky",
+        "trait": "Diviance",
+        "description": "You're into things so bizarre that we're not even sure they exist. Your freaks are truly in a league of their own.",
+        "image": "https://c.tenor.com/46sVBha0GfsAAAAd/tenor.gif"
+    },
+    "Z": {
+        "name": "Rizzler",
+        "trait": "Aura",
+        "description": "Your aura is practically gravitational. People are drawn to you before they even realize they're falling for you.",
+        "image": "https://c.tenor.com/PCggOi2R6ywAAAAd/tenor.gif"
+    },
+    "V": {
+        "name": "Virgin",
+        "trait": "Aura",
+        "description": "You have ZERO game. Your romantic strategy is mostly hoping something happens by accident, and somehow, even that hasn't worked yet. At this point, you're waiting for divine intervention. Unfortunately, Cupid has you on his block list.",
+        "image": "https://c.tenor.com/V1eYUcSmj_oAAAAd/tenor.gif"
+    }
+}

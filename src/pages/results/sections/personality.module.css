@@ -1,0 +1,32 @@
+.textbanner {
+    font-size: calc(var(--h1) * 1.5);
+    font-weight: 400;
+    text-align: center;
+    text-shadow: var(--text-purple-shadow);
+}
+
+.personality {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+
+    color: var(--text-purple);
+
+    background-image: var(--banner);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.personality::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 47%, rgba(151, 96, 255, .16), transparent 32%), 
+                linear-gradient(to bottom, rgba(5, 4, 12, .08), rgba(5, 4, 12, .48));
+    mix-blend-mode: screen;
+}

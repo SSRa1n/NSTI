@@ -1,0 +1,66 @@
+@import url('https://fonts.cdnfonts.com/css/d-din');
+@import url('https://fonts.cdnfonts.com/css/tt-jenevers-trl');
+
+@import "tailwindcss";
+
+/* For Font size, multiply everything (vw, rem) by % how much you want to scale */
+
+@theme {
+  --h1: clamp(3rem, 6vw, 6rem);
+  --h2: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  --h3: clamp(1rem, 1rem + 1vw, 2rem);
+  --h4: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --h5: clamp(1.125rem, 1rem + 0.4vw, 1.25rem);
+  --h6: clamp(1rem, 1rem + 0.2vw, 1.125rem);
+  --p: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+
+  --font-din: 'DIN', sans-serif;
+  --font-jenevers: 'TT Jenevers Trl', sans-serif;
+
+  --banner: radial-gradient(rgba(3, 0, 15, 0.9)), 
+            linear-gradient(to bottom, rgba(5, 4, 12, .08) 60%, rgba(5, 4, 12, 1) 100%),
+            url('/web-bg.webp');
+
+  --bg: rgb(5, 4, 20);
+  --bg-secondary: rgb(17, 23, 34);
+  --bg-quiz: rgb(25, 35, 50);
+  --bg-quiz: linear-gradient(
+              180deg,
+              rgb(25, 35, 50) 0%,
+              #0B0F18 100%
+            );
+
+  --color-aliceblue: aliceblue;
+  --color-green: rgb(51, 164, 116);
+  --color-green-hover: rgba(51, 164, 116, 0.5);
+
+  --color-red: rgb(164, 84, 84);
+  --color-red-hover: rgba(164, 84, 84, 0.5);
+
+  --color-gray: rgb(156, 163, 175);
+  --color-gray-hover: rgba(156, 163, 175, 0.5);
+  --color-darkgray: rgb(55, 65, 81);
+
+  --color-white: rgb(200, 200, 200);
+
+  --text-purple: #f5efff;
+  --text-purple-shadow: 0 0 18px rgba(183, 126, 255, .42), 0 0 55px rgba(123, 66, 255, .22);
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-jenevers);
+  color: aliceblue;
+  background: var(--bg-quiz);
+}
+
+h1 {  font-size: var(--h1); }
+h2 {  font-size: var(--h2); }
+h3 {  font-size: var(--h3); }
+h4 {  font-size: var(--h4); }
+h5 {  font-size: var(--h5); }
+h6 {  font-size: var(--h6); }
+p {  font-size: var(--p); }

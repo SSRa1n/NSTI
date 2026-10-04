@@ -1,0 +1,123 @@
+.shareContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+
+    padding: 1rem 7.5rem;
+
+    column-gap: 2rem;
+
+    row-gap: 1rem;
+    
+    background-image: var(--banner);
+    background-size: cover;
+    background-position: center;
+}
+
+.resultContainer {
+    border: 3px solid aliceblue;
+    border-radius: 2rem;
+    overflow: hidden;
+    zoom: 0.8;
+}
+
+.resultCard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 700px; 
+    height: auto;
+    align-items: center;
+    padding: 40px 60px;
+
+
+    background-image: var(--banner);
+    background-size: cover;
+    background-position: right;
+
+    color: var(--text-purple);
+    
+
+    h1 { font-size: 4rem; };
+    h2 { font-size: 3rem; };
+    h3 { font-size: 2.5rem; };
+    h4 { font-size: 2rem; };
+    h5 { font-size: 1.75rem; };
+    h6 { font-size: 1.5rem; };
+    p { font-size: 1.3rem; };
+
+    .shadowtext {
+        text-shadow: var(--text-purple-shadow);
+    }
+}
+
+.highlighted {
+    color: var(--color-purple);
+    font-weight: bold;
+    text-shadow: 0 0 18px rgba(183, 126, 255, .84), 
+                 0 0 55px rgba(123, 66, 255, .44);
+}
+
+.traitsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    zoom: 0.8;
+
+    --bar-size: 650px;
+}
+
+.traitsContainer > section {
+    width: 100%;
+}
+
+.traitsContainer :global(.grid) {
+    grid-template-columns: 40px calc(var(--bar-size) - 100px) 40px;
+    gap: 0.5rem;
+}
+
+.traitsContainer :global(.full-indicators) {
+    width: var(--bar-size);
+}
+
+.formsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: wrap;
+    flex: 1 1 300px;
+    min-width: 300px;
+
+    .inputLabel {
+        font-size: 0.8rem;
+        color: var(--color-gray);
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.inputField {
+    width: calc(300px + 20%);
+    padding: 0.5rem;
+    border: 1px solid var(--color-gray);
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.inputField:disabled {
+    background-color: var(--color-gray-hover);
+    color: var(--color-light-gray);
+}
+
+/* .resultCard::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 800px 400px at 50% 15%, rgba(151, 96, 255, .16), transparent 32%), 
+                linear-gradient(to bottom, rgba(5, 4, 12, .08), rgba(5, 4, 12, .48));
+    mix-blend-mode: screen;
+} */

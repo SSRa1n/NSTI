@@ -1,0 +1,17 @@
+import Style from './banner.module.css'
+
+export function Banner() {
+  return (
+    <section className={Style.banner}>
+        <p className="tracking-widest">NAI-SIVAKORN TYPE INDICATOR</p>
+        <h1 className="font-medium leading-none tracking-wider">
+          NSTI<br/>Personality Test
+        </h1>
+        <h3 className="font-light">Find out what kind of menace<br/>you are in the group</h3>
+        <i className="scroll-arrow bi bi-arrow-down" 
+           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+          onMouseEnter={(e) => e.currentTarget.style.cursor = 'pointer'}
+        />
+    </section>
+    )
+}

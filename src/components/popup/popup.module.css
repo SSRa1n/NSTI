@@ -1,0 +1,61 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0);
+
+    pointer-events: none;
+    transition: background 0.3s ease;
+
+    z-index: 1000;
+}
+
+.popup {
+    width: clamp(300px, calc(1900px - 70vw), 50vw);
+
+    display: flex;
+    flex-direction: column;
+
+    color: var(--text-purple);
+    font-feature-settings: "calt" 0;
+
+    background: rgba(3, 0, 15, 0.8);
+    border-radius: 16px;
+
+    box-shadow: var(--text-purple-shadow);
+
+    border: 2px solid var(--text-purple);
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.35s ease,
+                opacity 0.35s ease;
+
+    padding: 24px;
+}
+
+.open {
+    background: rgba(0, 0, 0, 0.6);
+    pointer-events: auto;
+}
+
+.open .popup {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+
+    background: none;
+    border: none;
+    color: var(--text-purple);
+    font-size: 28px;
+    cursor: pointer;
+}

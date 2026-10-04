@@ -1,0 +1,74 @@
+.circleRadio input[type="radio"] {
+    display: none;
+}
+
+/* Base styling for circle */
+.circle {
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 1vw;
+    /* Space between each circle */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Size Variants */
+.circle.big {
+    width: clamp(17px, 2rem + 10vw, 70px);
+    height: clamp(17px, 2rem + 10vw, 70px);
+}
+
+.circle.small {
+    width: clamp(12px, 1.5rem + 7.5vw, 50px);
+    height: clamp(12px, 1.5rem + 7.5vw, 50px);
+}
+
+.circle.tiny {
+    width: clamp(8px, 1rem + 5vw, 35px);
+    height: clamp(8px, 1rem + 5vw, 35px);
+}
+
+/* Default (Unselected) State: Transparent with colored border */
+.circle.red {
+    border: 2px solid var(--color-red);
+    background-color: transparent;
+}
+
+.circle.gray {
+    border: 2px solid var(--color-gray);
+    background-color: transparent;
+}
+
+.circle.green {
+    border: 2px solid var(--color-green);
+    background-color: transparent;
+}
+
+/* Hover State: 50% opacity fill */
+.circle:hover.red {
+    background-color: var(--color-red-hover);
+}
+
+.circle:hover.gray {
+    background-color: var(--color-gray-hover);
+}
+
+.circle:hover.green {
+    background-color: var(--color-green-hover);
+}
+
+/* Checked State: 100% opacity fill */
+.circleRadio input[type="radio"]:checked + .circle.red {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+}
+
+.circleRadio input[type="radio"]:checked + .circle.gray {
+    background-color: var(--color-gray);
+    border-color: var(--color-gray);
+}
+
+.circleRadio input[type="radio"]:checked + .circle.green {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}

@@ -1,0 +1,11 @@
+.line {
+    width: 50vw;
+    height: 4px;
+    margin: 10px auto 20px auto;
+}
+
+.lineThin {
+    width: 50vw;
+    height: 2px;
+    margin: 10px auto 20px auto;
+}

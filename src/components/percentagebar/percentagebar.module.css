@@ -1,0 +1,84 @@
+.percentageBar {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.percentageBar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 100% 100% at 50% 50%,
+        rgba(151, 96, 255, 0.16),
+        rgba(151, 96, 255, 0) 50%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.percentageBar:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.percentageBar:hover::before {
+    opacity: 1;
+}
+
+.nonInteractive:hover {
+    transform: none;
+    cursor: default;
+}
+
+.nonInteractive:hover::before {
+    opacity: 0;
+}
+
+.highlighted {
+    color: var(--color-purple);
+    font-weight: bold;
+    text-shadow: 0 0 18px rgba(183, 126, 255, .84), 
+                 0 0 55px rgba(123, 66, 255, .44);
+}
+
+.label {
+    font-size: calc(var(--p) * 0.9);
+}
+
+.barContainer {
+    width: 100%;
+    height: 1.25rem;
+    border-radius: 0.625rem;
+    border: 2px solid var(--color-gray);
+}
+
+.bar {
+    align-items: center;
+    height: 100%;
+    border-radius: 0.625rem;
+    position: relative;
+
+    background-image: linear-gradient(to left, rgb(183, 126, 255), rgb(123, 66, 255));
+}
+
+.bar.reverse {
+    margin-left: auto;
+    background-image: linear-gradient(to right, rgb(183, 126, 255), rgb(123, 66, 255));
+}
+
+.bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0%;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid aliceblue;
+}
+
+.bar.reverse::after {
+    left: 0%;
+    right: auto;
+}

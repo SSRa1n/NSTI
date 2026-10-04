@@ -1,0 +1,8 @@
+.shape 
+{
+    height: 75px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(50% + 370px) 100%, 47% calc(100% - 27px), calc(50% - 370px) 100%, 0 calc(100% - 30px));
+    position: relative;
+    width: 100vw;
+    transform: translateY(-1px);
+}

@@ -1,0 +1,34 @@
+.potential {
+    height: 100vh;
+
+    background-image: var(--banner);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+
+    h1 {
+        font-size: calc(var(--h1) * 1.2);
+        color: var(--text-purple);
+        text-shadow: var(--text-purple-shadow);
+    }
+}
+
+.potential::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 200vw 100vh at 25% 50%, rgba(151, 96, 255, .16), transparent 32%), 
+                linear-gradient(to bottom, rgba(5, 4, 12, .08), rgba(5, 4, 12, .48));
+    mix-blend-mode: screen;
+}
+
+.potentialImage {
+    width: clamp(200px, 40vw, 400px);
+    height: auto;
+}
