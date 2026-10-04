@@ -12,9 +12,7 @@ Take the quiz and discover your True Self™.
 
 ---
 
-## !!!NERD CORNER!!!
-
----
+# !!!NERD CORNER!!!
 
 ### Data modification
 Source data is located in `public/data/json`.
