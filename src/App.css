@@ -8,17 +8,6 @@
     transform: translateY(-1px);
 }
 
-
-i.scroll-arrow {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: clamp(1rem, 2vw, 2rem);
-    cursor: pointer;
-    animation: bounce 1s infinite; 
-}
-
 .share-button {
     position: relative;
     display: flex;
@@ -74,14 +63,4 @@ i.scroll-arrow {
 
 .share-button:hover::before {
     opacity: 1;
-}
-
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        transform: translateX(-50%) translateY(-10px);
-    }
 }

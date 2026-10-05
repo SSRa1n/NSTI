@@ -1,4 +1,5 @@
 import Style from './banner.module.css'
+import { ScrollArrow } from '@/components/scrollarrow/scrollarrow'
 
 export function Banner() {
   return (
@@ -8,10 +9,7 @@ export function Banner() {
           NSTI<br/>Personality Test
         </h1>
         <h3 className="font-light">Find out what kind of menace<br/>you are in the group</h3>
-        <i className="scroll-arrow bi bi-arrow-down" 
-           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-          onMouseEnter={(e) => e.currentTarget.style.cursor = 'pointer'}
-        />
+        <ScrollArrow />
     </section>
     )
 }
