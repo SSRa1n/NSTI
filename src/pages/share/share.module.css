@@ -62,6 +62,7 @@
 .traitsContainer {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
     gap: 20px;
 
     zoom: 0.8;

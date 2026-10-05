@@ -41,6 +41,7 @@ function Share() {
     const imgRef = useRef<HTMLImageElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
     const [image, setImage] = useState<string | null>(null);
+    const [imgLoaded, setImgLoaded] = useState(false);
     const [formsName, setFormsName] = useState<string>("");
     const [submitted, setSubmitted] = useState(false);
 
@@ -87,6 +88,7 @@ function Share() {
         const dataUrl = await toPng(card);
         setImage(dataUrl);
         card.style.display = 'none';
+        setImgLoaded(true);
     }, []);
 
     const saveImage = () => {
@@ -126,10 +128,16 @@ function Share() {
                                     />
                                 ))}
                             </section>
+                            <p className='text-gray absolute bottom-4'>SSRa1n.github.io/NSTI</p>
                         </div>
                         <img src={image || ""} className={Style.resultImage} ref={imgRef}/>
                     </section>
-                    <JumpButton onClick={saveImage} text='Save Image' fontSize='p'/>
+                    {imgLoaded ? (
+                        <JumpButton onClick={saveImage} text='Save Image' fontSize='p'/>
+                    ) : (
+                        <JumpButton onClick={() => {}} text='Loading...' fontSize='p'/>    
+                    )}
+                    
                 </div>
                 <section className={Style.formsContainer}>
                     <h2 className='text-center text-purple text-shadow-(--text-purple-shadow)'>Share your result with us</h2>
